@@ -61,6 +61,12 @@ return [
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
+            'level' => 'info',
+        ],
+
+        'log-activity' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/log_activity.log'),
             'level' => env('LOG_LEVEL', 'debug'),
             'replace_placeholders' => true,
         ],
